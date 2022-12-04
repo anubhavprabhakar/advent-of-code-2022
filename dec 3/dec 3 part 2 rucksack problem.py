@@ -34,4 +34,5 @@ for i in range(0, len(a), 3):
                 total+=priority(string1[j])
                 break
 
+
 print(total)

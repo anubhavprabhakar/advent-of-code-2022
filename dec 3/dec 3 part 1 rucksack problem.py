@@ -41,4 +41,5 @@ for i in range(0, len(a)):
             #checked.append(string1[j])
     #print("fin: ", checked)
 
+
 print(total)
