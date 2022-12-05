@@ -22,7 +22,7 @@ numOfStc=int(nums[-2])
 #accessing each element from the array to put into particular stack
 print("\nhere:")
 for i in range(0, len(stc)):
-    element=0
+    element=0   #to know which stack the following element belongs to
     for j in range(1, len(stc[i]), 4):
         element+=1
         print(element,":", stc[i][j], end=' ')
@@ -32,4 +32,7 @@ print("")
 
 print("popped:", stc)
 
-#making into array
+#making into array/dictionary
+#more explaination in next commit
+
+
