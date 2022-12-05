@@ -22,7 +22,11 @@ numOfStc=int(nums[-2])
 arr=[]
 d={}
 
-#accessing each element from the array to put into particular stack
+
+
+#making stacks into array/dictionary
+
+#accessing each element from the stacks(in the rocket ship) to put into particular list
 print("\nhere:")
 for i in range(0, len(stc)):
     element=0   #to know which stack the following element belongs to
@@ -32,25 +36,24 @@ for i in range(0, len(stc)):
             print(element,":", stc[i][j], end=' ')
             if element in d.keys():
                 d[element].append(stc[i][j])
-                #print("in try block")
+                print("in if block")
             else:
                 dic={element: []}
                 d.update(dic)
                 d[element].append(stc[i][j])
-                #print("in exception block")
+                print("in else block")
             
     print("")
 
+#to reverse the list of stacks, so that popping and appending operations give correct representation of items moved
+for i in range(1, numOfStc+1):
+    d[i].reverse()
 
 print("dictionary: ", d)
 
 print("")
 
 print("popped:", stc)
-
-#making into array/dictionary
-#more explaination in next commit
-
 
 
 
@@ -59,11 +62,15 @@ ins=ins.split('\n')
 
 print(ins)
 
-instruction = ins[0].split()
+for i in range(0, len(ins)):
+    instruction = ins[i].split()
+    print(instruction)
+    move = instruction[1]
+    _from = instruction[3]
+    to = instruction[5]
 
-print(instruction)
-move = instruction[1]
-_from = instruction[3]
-to = instruction[5]
+    print(move, _from, to)
 
-print(move, _from, to)
+    
+    
+    
