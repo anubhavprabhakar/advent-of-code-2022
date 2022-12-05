@@ -23,14 +23,10 @@ for i in range(0, len(stc)):
     for j in range(1, len(stc[i]), 4):
         element+=1
         if(stc[i][j]!=' '):
-            
-            if element in d.keys():
-                d[element].append(stc[i][j])
-                
-            else:
+            if element not in d.keys():
                 dic={element: []}
                 d.update(dic)
-                d[element].append(stc[i][j])
+            d[element].append(stc[i][j])
                 
 
 
