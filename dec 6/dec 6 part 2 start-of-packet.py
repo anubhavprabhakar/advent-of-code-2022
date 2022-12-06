@@ -6,8 +6,8 @@ print(s)
 
 for i in range(0, len(s)):
     repeat = False
-    for j in range(i, i+3):
-        for k in range(j+1, i+4):
+    for j in range(i, i+13):
+        for k in range(j+1, i+14):
             if(s[j]==s[k]):
                 repeat = True
                 break
@@ -15,5 +15,5 @@ for i in range(0, len(s)):
             break
         
     if(repeat==False):
-        print(i+4)
+        print(i+14)
         break
