@@ -50,7 +50,7 @@ for i in range(0, len(ins)):
 
     for j in range(0, move):  #moving 'move' number of times
         toMove=d[_from].pop() #popping top most element, i.e. the last element from the 'from' list
-        destStack=d[to].append(toMove)  #placing that element into the 'to' list it asked(the instruction asked)
+        d[to].append(toMove)  #placing that element into the 'to' list it asked(the instruction asked)
 
 
 #print(d)

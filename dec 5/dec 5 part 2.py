@@ -56,7 +56,7 @@ for i in range(0, len(ins)):
     moving.reverse()
     #print("moving:", moving)
     for k in range(0, len(moving)):
-        destStack=d[to].append(moving[k])#placing that element into the 'to' list it asked(the instruction asked)
+        d[to].append(moving[k])#placing that element into the 'to' list it asked(the instruction asked)
     #print(d)
 
 

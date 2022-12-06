@@ -22,10 +22,8 @@ nums=stc.pop()
 print("popped nos:", nums)
 numOfStc=int(nums[-2])
 
-arr=[]
+
 d={}
-
-
 
 #making stacks into array/dictionary
 
@@ -35,8 +33,8 @@ for i in range(0, len(stc)):
     element=0   #to know which stack the following element belongs to
     for j in range(1, len(stc[i]), 4):
         element+=1
+        print(element,":", stc[i][j], end=' ')
         if(stc[i][j]!=' '):  #to ignore the blank space instead of a crate
-            print(element,":", stc[i][j], end=' ')
             if element not in d.keys():
                 dic={element: []}
                 d.update(dic)
@@ -60,16 +58,16 @@ print("popped:", stc)
 #accessing instructions
 ins=ins.split('\n')
 
-#print(ins)
+print(ins)
 
 for i in range(0, len(ins)):
     instruction = ins[i].split()
-    #print(instruction)
+    print(instruction)  
     move = instruction[1]
     _from = instruction[3]
     to = instruction[5]
 
-    #print(move, _from, to)
+    print(move, _from, to)
 
     
     
