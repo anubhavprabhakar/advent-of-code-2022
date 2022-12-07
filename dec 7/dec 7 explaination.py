@@ -26,7 +26,7 @@ def makesizelist(string):
                 continue
             else:
                 if(s[2] in sizeofdir.keys()):
-                    s[2]=s[2]+'copy'
+                    s[2]=s[2]+'copy'    # if dir with same name exists in key, then simply change its name to '<name>copy'
                     dic = {s[2]: 0}
                     sizeofdir.update(dic)
                     sizeofdir[s[2]]+=size
