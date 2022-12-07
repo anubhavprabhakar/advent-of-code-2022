@@ -1,10 +1,12 @@
 #make sure to change file.txt to the example given on website to understand better
 
 terminal=open('file.txt', 'r').read().split('\n')
-terminal.reverse()
+terminal.reverse()  #terminal output is reversed to better calculate the size of a directory(not needed to do it recursively),
+                    #and just add that size when 'dir <name>' is there in its parent directory
+
 print(terminal, "\n")
 
-sizeofdir={'/':0}
+sizeofdir={}
 
 def dirsize(name):
     return(sizeofdir[name])
@@ -23,12 +25,19 @@ def makesizelist(string):
             if(s[1]=='cd' and s[2]=='..'):
                 continue
             else:
-                if(s[2] not in sizeofdir.keys()):
+                if(s[2] in sizeofdir.keys()):
+                    s[2]=s[2]+'copy'
                     dic = {s[2]: 0}
                     sizeofdir.update(dic)
-                sizeofdir[s[2]]+=size
-                size = 0
-                continue
+                    sizeofdir[s[2]]+=size
+                    size = 0
+                    continue
+                else:
+                    dic = {s[2]: 0}
+                    sizeofdir.update(dic)
+                    sizeofdir[s[2]]+=size
+                    size = 0
+                    continue
             
         
         if(s[0].isdigit()):
