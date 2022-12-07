@@ -1,5 +1,3 @@
-#make sure to change file.txt to the example given on website to understand better
-
 terminal=open('file.txt', 'r').read().split('\n')
 terminal.reverse()
 print(terminal, "\n")
@@ -14,7 +12,7 @@ def makesizelist(string):
     size = 0
     for i in range(0, len(string)):
         s=string[i].split()
-        print(s)
+        #print(s)
         
         
         if(s[0]=='$'):
@@ -42,4 +40,6 @@ def makesizelist(string):
 
 makesizelist(terminal)
 
-print("\n",sizeofdir)
+#print("\n",sizeofdir)
+
+
