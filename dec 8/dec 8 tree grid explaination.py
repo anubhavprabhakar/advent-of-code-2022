@@ -1,3 +1,6 @@
+#this solution only works with example as of now
+#this solution will be updated to work with given input as well
+
 grid = [list(map(int, line)) for line in open('file.txt').read().splitlines()]
 
 print(grid)
