@@ -1,4 +1,5 @@
-grid = open('file.txt', 'r').read().split()
+grid = [list(map(int, line)) for line in open('file.txt').read().splitlines()]
+
 print(grid)
 #print(len(grid[0]))
 
